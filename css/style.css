@@ -1,1 +1,25 @@
-@import url(reset.css);/*# sourceMappingURL=style.css.map */
+@import url(reset.css);
+@import url(nav.css);
+@import url(footer.css);
+
+@font-face {
+  font-family: afacadflux;
+  src: url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff)
+      format(woff),
+    url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff2)
+      format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: afacadflux;
+  background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  height: 100%;
+}
