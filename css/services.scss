@@ -1,0 +1,119 @@
+﻿@import "reset.css";
+@import "nav.css";
+@import "footer.css";
+@import "style.css";
+
+$max-content-width: 80%;
+$max-logo-width: 100px;
+
+$main-color: rgb(221, 172, 111);
+$white-color: #fff;
+$text-primary-color: #000000;
+$background-nav: #ddd;
+$background-color-nav-link: #db8206;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+$font-size-xs: 0.5rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 2rem;
+
+// operateur definition == permet de tester l'egalité sur les valeurs, != permet de tester la difference des valeurs, < permet de tester si une valeur est strictement inferieur à une autre, > permet de tester si une valeur est strictement superieur à une autre, <= permet de tester si une valeur est strictement inferieur ou egale à une autre, >= permet de tester si une valeur est strictement superieure ou egale à une autre.
+
+@mixin display(
+  $display,
+  $column,
+  $direction,
+  $justifycontent,
+  $alignitems,
+  $gap
+) {
+  @if ($display == grid) {
+    display: $display;
+    grid-template-columns: $column;
+  } @else if($display == flex) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignitems;
+  }
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+@function calculate-width($col) {
+  @return 100% / $col;
+}
+
+%box-shadow {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+%link {
+  text-decoration: none;
+  color: $text-primary-color;
+  padding: $spacing-sm;
+}
+%title {
+  font-size: $font-size-xl;
+  letter-spacing: $spacing-xs;
+}
+
+.carousel-inner {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.container__services {
+  margin-bottom: 100px;
+}
+.pole__visuelcop {
+  margin-bottom: $spacing-xl;
+}
+.card__content,
+.card__secteur {
+  width: 100%;
+  @include display(flex, false, row, space-evenly, center, 10px);
+  .item,
+  .item__secteur {
+    @extend %box-shadow;
+    height: 250px;
+    width: 250px;
+    padding: $spacing-xl;
+    margin: 20px;
+    font-size: $font-size-xl;
+    font-weight: bolder #000;
+    border-radius: 50px;
+    text-align: center;
+    align-content: center;
+  }
+  .pole1 {
+    background-color: rgb(0, 68, 255);
+    border: #000 solid;
+  }
+  .pole2 {
+    background-color: rgb(3, 196, 61);
+    border: #000 solid;
+  }
+  .pole3 {
+    background-color: rgb(255, 72, 0);
+    border: #000 solid;
+  }
+  .secteur1 {
+    background-color: rgb(174, 0, 255);
+    border: #000 solid;
+  }
+  .secteur2 {
+    background-color: rgb(207, 128, 32);
+    border: #000 solid;
+  }
+}
