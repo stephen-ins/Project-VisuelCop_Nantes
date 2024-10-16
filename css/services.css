@@ -1,0 +1,13 @@
+@import url(reset.css);
+@import url(nav.css);
+@import url(footer.css);
+@import url(style.css);
+
+.carousel-inner {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.container__services{
+    margin-bottom: 100px;
+}
