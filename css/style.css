@@ -1,19 +1,13 @@
-@import url(reset.css);
-@import url(nav.css);
-@import url(footer.css);
-
+@import "reset.css";
+@import "nav.css";
+@import "footer.css";
 @font-face {
   font-family: afacadflux;
-  src: url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff)
-      format(woff),
-    url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff2)
-      format(woff2);
+  src: url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff) format(woff), url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff2) format(woff2);
   font-weight: normal;
   font-style: normal;
 }
-
-html,
-body {
+html {
   font-size: 16px;
   font-family: afacadflux;
   background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
@@ -23,3 +17,14 @@ body {
   width: 100%;
   height: 100%;
 }
+
+body {
+  font-size: 16px;
+  font-family: afacadflux;
+  background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

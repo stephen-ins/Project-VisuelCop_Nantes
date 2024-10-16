@@ -1,4 +1,4 @@
-@import url(reset.css);
-@import url(nav.css);
-@import url(footer.css);
-@import url(style.css);
+@import "reset.css";
+@import "nav.css";
+@import "footer.css";
+@import "style.css";/*# sourceMappingURL=communaute.css.map */
