@@ -27,4 +27,34 @@ body {
   background-position: left;
   width: 100%;
   height: 100%;
+}
+
+.connexion,
+.inscription {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.container__connexion {
+  font-size: 1.5rem;
+  padding: 10px;
+  justify-self: start;
+}
+
+.container__connexion {
+  display: flex;
+  flex-direction: repeat(2, 1fr);
+  justify-content: center;
+  align-items: start;
+  -moz-column-gap: 400px;
+       column-gap: 400px;
+  margin: 240px 0;
+  width: 100%;
+  height: auto;
+}
+
+.connexion,
+.inscription {
+  border-radius: 35px;
 }/*# sourceMappingURL=style.css.map */
