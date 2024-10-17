@@ -3,4 +3,102 @@
 @import "footer.css";
 @import "style.css";
 
+$max-content-width: 80%;
+$max-logo-width: 100px;
 
+$main-color: rgb(221, 172, 111);
+$white-color: #fff;
+$text-primary-color: #000000;
+$background-nav: #ddd;
+$background-color-nav-link: #db8206;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+$font-size-xs: 0.5rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 2rem;
+
+// operateur definition == permet de tester l'egalité sur les valeurs, != permet de tester la difference des valeurs, < permet de tester si une valeur est strictement inferieur à une autre, > permet de tester si une valeur est strictement superieur à une autre, <= permet de tester si une valeur est strictement inferieur ou egale à une autre, >= permet de tester si une valeur est strictement superieure ou egale à une autre.
+
+@mixin display(
+  $display,
+  $column,
+  $direction,
+  $justifycontent,
+  $alignitems,
+  $gap
+) {
+  @if ($display == grid) {
+    display: $display;
+    grid-template-columns: $column;
+  } @else if($display == flex) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignitems;
+  }
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+@function calculate-width($col) {
+  @return 100% / $col;
+}
+
+%box-shadow {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+%link {
+  text-decoration: none;
+  color: $text-primary-color;
+  padding: $spacing-sm;
+}
+%title__h2 {
+  font-size: $font-size-xl;
+  letter-spacing: $spacing-xs;
+}
+%p {
+  font-size: $font-size-lg;
+  padding: 10px;
+  justify-self: start;
+}
+
+.container__profile {
+  width: 100%;
+  padding: 200px 150px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 20px 80px;
+  .card__profile {
+    @include display(flex, false, row, center, center, false);
+  }
+}
+.title__h2 {
+  @extend %title__h2;
+  text-align: end;
+  letter-spacing: $spacing-md;
+}
+.paragraph {
+  @extend %p;
+}
+
+.picture {
+  border-radius: 150px;
+  @extend %box-shadow;
+}
+
+.picture:hover {
+  transform: scale(1.4);
+}

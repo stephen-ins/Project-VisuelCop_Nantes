@@ -1,4 +1,49 @@
 @import "reset.css";
 @import "nav.css";
 @import "footer.css";
-@import "style.css";/*# sourceMappingURL=communaute.css.map */
+@import "style.css";
+.picture {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.title__h2 {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  padding: 10px;
+  justify-self: start;
+}
+
+.container__profile {
+  width: 100%;
+  padding: 200px 150px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 20px 80px;
+}
+.container__profile .card__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title__h2 {
+  text-align: end;
+  letter-spacing: 1rem;
+}
+
+.picture {
+  border-radius: 150px;
+}
+
+.picture:hover {
+  transform: scale(1.4);
+}/*# sourceMappingURL=communaute.css.map */

@@ -82,6 +82,7 @@ $font-size-xl: 2rem;
 .card__content,
 .card__secteur {
   width: 100%;
+  color: #000;
   @include display(flex, false, row, space-evenly, center, 10px);
   .item,
   .item__secteur {
@@ -116,4 +117,8 @@ $font-size-xl: 2rem;
     background-color: rgb(207, 128, 32);
     border: #000 solid;
   }
+}
+
+.secteur__content {
+  margin-bottom: 200px;
 }
