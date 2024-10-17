@@ -3,29 +3,116 @@
 @import "reset.css";
 @import "nav.css";
 @import "footer.css";
+
 @font-face {
-	font-family: afacadflux;
-	src: url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff) format(woff), url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff2) format(woff2);
-	font-weight: normal;
-	font-style: normal;
+  font-family: afacadflux;
+  src: url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff)
+      format(woff),
+    url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff2)
+      format(woff2);
+  font-weight: normal;
+  font-style: normal;
 }
 html {
-	font-size: 16px;
-	font-family: $font-family_1;
-	background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
-	background-repeat: repeat;
-	background-size: cover;
-	background-position: left;
-	width: 100%;
-	height: 100%;
+  font-size: 16px;
+  font-family: $font-family_1;
+  background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  height: 100%;
 }
 body {
-	font-size: 16px;
-	font-family: $font-family_1;
-	background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
-	background-repeat: repeat;
-	background-size: cover;
-	background-position: left;
-	width: 100%;
-	height: 100%;
+  font-size: 16px;
+  font-family: $font-family_1;
+  background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  height: 100%;
+}
+
+$max-content-width: 80%;
+$max-logo-width: 100px;
+
+$main-color: rgb(221, 172, 111);
+$white-color: #fff;
+$text-primary-color: #000000;
+$background-nav: #ddd;
+$background-color-nav-link: #db8206;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+$font-size-xs: 0.5rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 2rem;
+
+@mixin display(
+  $display,
+  $column,
+  $direction,
+  $justifycontent,
+  $alignitems,
+  $gap
+) {
+  @if ($display == grid) {
+    display: $display;
+    grid-template-columns: $column;
+  } @else if($display == flex) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignitems;
+  }
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+@function calculate-width($col) {
+  @return 100% / $col;
+}
+
+%box-shadow {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+%link {
+  text-decoration: none;
+  color: $text-primary-color;
+  padding: $spacing-sm;
+}
+%title__h2 {
+  font-size: $font-size-xl;
+  letter-spacing: $spacing-xs;
+}
+%p {
+  font-size: $font-size-lg;
+  padding: 10px;
+  justify-self: start;
+}
+
+.container__connexion {
+  @include display(flex, false, repeat(2, 1fr), center, start, false);
+  column-gap: 400px;
+  margin: 240px 0;
+  width: 100%;
+  height: auto;
+  @extend %p;
+}
+
+.connexion,
+.inscription {
+  @extend %box-shadow;
+  border-radius: 35px;
 }
