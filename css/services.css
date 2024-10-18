@@ -7,8 +7,8 @@
 .card__secteur .item,
 .card__secteur .item__secteur {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .carousel-inner {
@@ -91,8 +91,9 @@
   border-radius: 50px;
 }
 .container__team__content .container__service__team {
-  width: 100%;
+  width: 80%;
   display: flex;
+  text-align: justify;
   flex-direction: row;
   justify-content: center;
 }
