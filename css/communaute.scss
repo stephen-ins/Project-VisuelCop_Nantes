@@ -69,18 +69,18 @@ $font-size-xl: 2rem;
 }
 %p {
   font-size: $font-size-lg;
-  padding: 10px;
+  padding: 30px;
   justify-self: start;
 }
 
 .container__profile {
   width: 100%;
-  padding: 200px 150px;
+  padding: 50px 100px;
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 20px 80px;
+  gap: 10px 100px;
   .card__profile {
     @include display(flex, false, row, center, center, false);
   }
@@ -92,6 +92,7 @@ $font-size-xl: 2rem;
 }
 .paragraph {
   @extend %p;
+  text-align: justify;
 }
 
 .picture {
@@ -101,4 +102,5 @@ $font-size-xl: 2rem;
 
 .picture:hover {
   transform: scale(1.4);
+  transition: 1.5s;
 }

@@ -2,7 +2,7 @@
 @import "nav.css";
 @import "footer.css";
 @import "style.css";
-.card__content .item,
+.container__team__content .photo__equipe, .card__content .item,
 .card__content .item__secteur,
 .card__secteur .item,
 .card__secteur .item__secteur {
@@ -77,4 +77,26 @@
 
 .secteur__content {
   margin-bottom: 200px;
+}
+
+.container__team__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container__team__content .photo__equipe {
+  padding: 8px;
+  width: 80%;
+  border-radius: 50px;
+}
+.container__team__content .container__service__team {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container__team__content .text__services {
+  width: 100%;
+  padding: 40px 160px;
 }/*# sourceMappingURL=services.css.map */
