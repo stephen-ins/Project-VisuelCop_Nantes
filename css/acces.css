@@ -1,0 +1,49 @@
+@import url(reset.css);
+@import url(nav.css);
+@import url(footer.css);
+@import url(style.css);
+.maps {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.title__h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+}
+
+.container .paragraph__maps {
+  font-size: 1.5rem;
+  padding: 30px;
+  justify-self: start;
+}
+
+.maps {
+  width: 100%;
+  padding: 2rem;
+  margin: 80px auto;
+  border-radius: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+}
+.container .paragraph__maps {
+  border-bottom: 2px solid #000000;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.logo__gmaps {
+  margin: 25px 0;
+  width: 56px;
+  height: 56px;
+  align-self: center;
+}
+
+.button__print__maps {
+  padding: 6px;
+}/*# sourceMappingURL=acces.css.map */
