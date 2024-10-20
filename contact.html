@@ -41,10 +41,49 @@
     </section>
     <section class="accueil d-flex w-100 flex-column mt-5 align-items-center">
       <p class="slogan__visuelcop mb-5 mt-4 fs-2 fst-italic">
-        "Une simple question pour engager une discussion"
+        "Engager une discussion par une simple question"
       </p>
     </section>
-    <footer class="footer mt-5">
+
+    <main class="main">
+      <video
+        autoplay="autoplay"
+        muted=""
+        loop="infinite"
+        poster="assets/04-images/video_background/video_background_visuelcop.webm"
+        class="video__background"
+      >
+        <source
+          src="assets/04-images/video_background/video_background_visuelcop.webm"
+          type="video/webm"
+        />
+      </video>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Saisissez votre adresse mail</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="Votre-adresse@mail.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Votre message</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          placeholder="Votre message"
+
+        ></textarea>
+      </div>
+    </main>
+
+    <footer class="footer">
       <div
         class="reseau p-3 d-flex flex-row justify-content-evenly"
         class="container__reseau bg-light"
@@ -71,7 +110,9 @@
       <section
         class="footer__menu d-flex flex-row justify-content-between align-items-center fs-5 mx-5 p-3"
       >
-        <a href="contact.html" class="text-decoration-none text-dark fw-semibold"
+        <a
+          href="contact.html"
+          class="text-decoration-none text-dark fw-semibold"
           >Contact</a
         >
         <a href="acces.html" class="text-decoration-none text-dark fw-semibold"
