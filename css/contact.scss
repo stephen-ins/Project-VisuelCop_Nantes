@@ -76,3 +76,29 @@ $font-size-xl: 2rem;
   padding: 30px;
   justify-self: start;
 }
+
+// video background
+
+.main {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video__background {
+  position: top;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.video__background::before {
+  position: top;
+  content: "";
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.027);
+}
