@@ -1,0 +1,168 @@
+@import url(reset.css);
+@import url(style.css);
+@import url(nav.css);
+@import url(footer.css);
+
+$max-content-width: 80%;
+$max-logo-width: 100px;
+
+$main-color: rgb(221, 172, 111);
+$white-color: #fff;
+$text-primary-color: #000000;
+$background-nav: #ddd;
+$background-color-nav-link: #db8206;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.75rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+$font-size-xs: 0.5rem;
+$font-size-sm: 0.75rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 2rem;
+
+// operateur definition == permet de tester l'egalité sur les valeurs, != permet de tester la difference des valeurs, < permet de tester si une valeur est strictement inferieur à une autre, > permet de tester si une valeur est strictement superieur à une autre, <= permet de tester si une valeur est strictement inferieur ou egale à une autre, >= permet de tester si une valeur est strictement superieure ou egale à une autre.
+
+@mixin display(
+  $display,
+  $column,
+  $direction,
+  $justifycontent,
+  $alignitems,
+  $gap
+) {
+  @if ($display == grid) {
+    display: $display;
+    grid-template-columns: $column;
+  } @else if($display == flex) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justifycontent;
+    align-items: $alignitems;
+  }
+  @if ($gap) {
+    gap: $gap;
+  }
+}
+
+@function calculate-width($col) {
+  @return 100% / $col;
+}
+
+%box-shadow {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  //   margin-top: 100px;
+  //   margin-bottom: 100px;
+  border-radius: 40px;
+}
+
+%link {
+  text-decoration: none;
+  color: $text-primary-color;
+  padding: $spacing-sm;
+}
+%title__h2 {
+  font-size: $font-size-xl;
+  letter-spacing: $spacing-xs;
+}
+%title__h3 {
+  font-size: $font-size-lg;
+  letter-spacing: $spacing-xs;
+}
+%p {
+  font-size: $font-size-lg;
+  padding: 30px;
+  justify-self: start;
+}
+.main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  height: auto;
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 40px 80px;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "picture1 text1"
+    "paragraph picture2"
+    "picture3 text2"
+    "slogan1 picture4"
+    "text4 picture5"
+    "picture6 picture6";
+}
+
+.picture1 {
+  grid-area: picture1;
+}
+
+.text1 {
+  grid-area: text1;
+  @extend %p;
+  color: $white-color;
+  text-align: justify;
+}
+
+.picture2 {
+  grid-area: picture2;
+}
+
+.paragraph {
+  grid-area: paragraph;
+  @extend %title__h2;
+  color: $white-color;
+  text-align: justify;
+}
+
+.picture3 {
+  grid-area: picture3;
+}
+
+.text2 {
+  grid-area: text2;
+  @extend %p;
+  color: $white-color;
+  text-align: justify;
+}
+
+.slogan1 {
+  grid-area: slogan1;
+  @extend %p;
+  color: $white-color;
+  text-align: justify;
+}
+
+.text4 {
+  grid-area: text4;
+  @extend %p;
+  color: $white-color;
+  text-align: justify;
+}
+
+.picture4 {
+  grid-area: picture4;
+}
+
+.picture5 {
+  grid-area: picture5;
+}
+
+.picture6 {
+  grid-area: picture6;
+  width: 100%;
+  height: auto;
+}
