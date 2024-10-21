@@ -45,7 +45,7 @@
       </p>
     </section>
 
-    <main class="main">
+    <main class="main__video">
       <video
         autoplay="autoplay"
         muted=""
@@ -58,28 +58,129 @@
           type="video/webm"
         />
       </video>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Saisissez votre adresse mail</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="Votre-adresse@mail.com"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Votre message</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          placeholder="Votre message"
 
-        ></textarea>
+      <div class="container__form">
+        <h1 class="title__form">Formulaire de contact</h1>
+
+        <!-- 
+        form : declaration du formulaire
+        method : comment vont circuler les donnes saisies GET ou POST
+        enctype : encode des donnes
+        action : destination des donnes URL si differentes
+        input : champ de saisie du formulaire avec differents type text password email file color date etc ...
+        textarea : champs de saisi de grande quantite de texte
+        select : liste deroulante avec choix d options 
+        type checkbox : case à cocher multiple
+        type radio : case à cocher choix unique
+        attribut check : permet de cocher une case par defaut
+        attribut selected : permet de selectionner une option par defaut
+        -->
+
+        <form action="" method="" enctype="" class="form">
+          <div class="form-group">
+            <label for="Prenom">Prénom</label>
+            <input
+              type="text"
+              id="prenom"
+              name="prenom"
+              class="form-control"
+              placeholder="Saisir votre prénom"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Nom">Nom</label>
+            <input
+              type="nom"
+              name="nom"
+              id="nom"
+              class="form-control"
+              placeholder="Saisir votre nom"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Saisir votre adresse email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="profession">Votre profession</label>
+            <select name="profession" id="profession" class="form-control">
+              <option value="professionnel">Je suis un professionnel</option>
+              <option value="recruteur">Je suis un recruteur</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="langage">Quel est votre régime de travail ?</label>
+
+            <div class="form-radio">
+              <p class="radio-content">
+                <input
+                  type="radio"
+                  name="regime__travail"
+                  id="salarié"
+                  value="salarié"
+                />
+                <span class="radio-label">Salarié</span>
+              </p>
+              <p class="radio-content">
+                <input
+                  type="radio"
+                  name="regime__travail"
+                  id="fonctionnaire"
+                  value="fonctionnaire"
+                />
+                <span class="radio-label">Fonctionnaire</span>
+              </p>
+
+              <p class="radio-content">
+                <input
+                  type="radio"
+                  name="regime__travail"
+                  id="travailleur__indépendant"
+                  value="travailleur__indépendant"
+                />
+                <span class="radio-label">Travailleur indépendant</span>
+              </p>
+              <p class="radio-content">
+                <input
+                  type="radio"
+                  name="regime__travail"
+                  id="intermittent__spectacle"
+                  value="intermittent__spectacle"
+                />
+                <span class="radio-label">Intermittent du spectacle</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message" placeholder="Inscrire votre message"
+              >Votre message</label
+            >
+            <textarea
+              name="adresse"
+              id="textarea"
+              class="form-control"
+              cols=""
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="button__content">
+            <button type="submit" class="button btn__submit">ENVOYER</button>
+
+            <button type="reset" class="button btn__reset">EFFACER</button>
+          </div>
+        </form>
       </div>
     </main>
 

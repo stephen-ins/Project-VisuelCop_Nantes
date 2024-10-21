@@ -2,26 +2,58 @@
 @import url(nav.css);
 @import url(footer.css);
 @import url(style.css);
-.main {
-  height: auto;
-  width: 100%;
-  overflow: hidden;
+.main__video .container__form .title__form {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
 }
 
-.video__background {
-  position: top;
+.main__video .container__form {
+  font-size: 1.5rem;
+  padding: 30px;
+  justify-self: start;
+}
+
+.main__video {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main__video .container__form .title__form {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.main__video .container__form .form-group {
+  margin: 1.5rem;
+}
+
+.button__content {
+  margin-top: 3rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn__submit,
+.btn__reset {
+  border-radius: 10px;
+}
+
+.background__video {
+  position: relative;
   top: 0;
   left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  background-size: cover;
-  z-index: -1;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.video__background::before {
-  position: top;
-  content: "";
-  height: auto;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.027);
+.container__form {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  opacity: 70%;
+  width: 45%;
 }/*# sourceMappingURL=contact.css.map */
