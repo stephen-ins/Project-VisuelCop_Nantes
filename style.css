@@ -1,0 +1,211 @@
+@import "reset.css";
+@import "nav.css";
+@import "footer.css";
+
+@font-face {
+  font-family: afacadflux;
+  src: url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff) format(woff),
+       url(../assets/02-fonts/afacadflux-variablefont_slntwght-webfont.woff2) format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Styles de base */
+html {
+  font-size: 16px;
+  font-family: afacadflux;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding-top: 76px;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../assets/03-banners/magicpattern-blurry-gradient-1728389152997.jpeg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Styles de navigation */
+.navbar {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95) !important;
+  z-index: 1000;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-collapse {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Styles de formulaire */
+.connexion,
+.inscription {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
+  margin: 20px auto;
+  padding: 2rem;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  max-width: 500px;
+}
+
+.container__connexion {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  padding: 20px;
+  margin: 40px 0;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.footer__menu {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.reseau {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  .container__connexion {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 62px;
+  }
+
+  .logo img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .slogan__visuelcop {
+    font-size: 1.5rem !important;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .footer__menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .row {
+    flex-direction: column !important;
+  }
+
+  .col, [class^="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .container__connexion {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .connexion,
+  .inscription {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .presentation,
+  .chef__portrait,
+  .signature {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .text__presentation {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-toggler {
+    padding: 0.25rem;
+  }
+
+  .navbar-collapse {
+    padding: 0.5rem;
+  }
+
+  .container,
+  .container-fluid {
+    padding: 0.5rem;
+  }
+
+  h1, .h1 { font-size: 1.8rem; }
+  h2, .h2 { font-size: 1.5rem; }
+
+  .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .footer__menu{
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -91,4 +91,86 @@
   grid-area: picture6;
   width: 100%;
   height: auto;
+}
+
+/* Ajoutez ces styles pour la responsivité */
+@media screen and (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .picture1, .picture2, .picture3, 
+    .picture4, .picture5, .picture6 {
+        width: 100%;
+        height: auto;
+    }
+
+    .text1, .text2, .text4,
+    .paragraph, .slogan1 {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .slogan__visuelcop {
+        font-size: 1.5rem !important;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .footer__menu {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .reseau {
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .reseau a {
+        margin: 0 0.5rem !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .text1, .text2, .text4 {
+        font-size: 1rem;
+    }
+
+    .slogan1 {
+        font-size: 1.2rem;
+    }
+
+    .footer__menu {
+        font-size: 1rem !important;
+    }
+
+    .footer__menu a {
+        padding: 0.5rem;
+    }
 }/*# sourceMappingURL=professionnel.css.map */
