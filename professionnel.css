@@ -3,13 +3,13 @@
 @import url(nav.css);
 @import url(footer.css);
 .paragraph {
-  font-size: 2rem;
-  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
 }
 
 .text4, .slogan1, .text2, .text1 {
-  font-size: 1.5rem;
-  padding: 30px;
+  font-size: 1.2rem;
+  padding: 15px;
   justify-self: start;
 }
 
@@ -24,11 +24,11 @@
 .container {
   width: 100%;
   height: auto;
-  margin: 100px 0;
+  margin: 40px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 40px 80px;
+  grid-template-rows: repeat(6, auto);
+  gap: 20px 40px;
   grid-auto-flow: column;
   justify-content: center;
   align-content: center;
