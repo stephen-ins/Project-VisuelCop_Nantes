@@ -51,9 +51,105 @@
 }
 
 .container__form {
-  position: absolute;
+  position: relative;
   z-index: 10;
   color: #fff;
-  opacity: 70%;
-  width: 45%;
-}/*# sourceMappingURL=contact.css.map */
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+/* Styles de base */
+.container__form {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.video__background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .main__video {
+        min-height: auto;
+        background: linear-gradient(45deg, #1a1a1a, #333);
+    }
+
+    .video__background {
+        display: none;
+    }
+
+    .container__form {
+        position: relative;
+        width: 95%;
+        opacity: 1;
+        background: none;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container__form {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 1rem auto;
+    }
+}
+
+/* Ajout des styles pour le logo */
+.logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 80px auto 20px; /* Ajout de marge en haut pour compenser la navbar */
+    display: block;
+}
+
+/* Ajuster pour le responsive */
+@media screen and (max-width: 800px) {
+    .logo {
+        max-width: 200px;
+        margin: 70px auto 15px;
+    }
+
+    .slogan__visuelcop {
+        font-size: 1.2rem !important;
+        text-align: center;
+        padding: 0 1rem;
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo {
+        max-width: 150px;
+        margin: 65px auto 10px;
+    }
+}
+/*# sourceMappingURL=contact.css.map */

@@ -4,8 +4,7 @@
 @import "style.css";
 .picture {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px 5px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 20px 0;
 }
 
 .title__h2 {
@@ -20,32 +19,44 @@
 }
 
 .container__profile {
-  width: 100%;
-  padding: 50px 100px;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 10px 100px;
-}
-.container__profile .card__profile {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card__profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-.title__h2 {
-  text-align: end;
-  letter-spacing: 1rem;
-}
-
-.paragraph {
-  text-align: justify;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
 }
 
 .picture {
-  border-radius: 150px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem auto;
+}
+
+.title__h2 {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.paragraph {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .picture:hover {
@@ -114,18 +125,20 @@
     .text__communaute {
         width: 90% !important;
         font-size: 1.2rem !important;
+        margin-bottom: 2rem;
     }
 
     .container__profile {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 2rem;
+        width: 95%;
+        padding: 1rem;
+        gap: 1.5rem;
     }
 
     .card__profile {
         flex-direction: column !important;
         text-align: center;
-        padding: 1rem;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .title__h2 {
@@ -143,11 +156,15 @@
     .picture {
         width: 80%;
         max-width: 300px;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
     }
 
     .picture:hover {
         transform: scale(1.1);
+    }
+
+    .footer {
+        margin-top: 1rem;
     }
 }
 
@@ -169,7 +186,13 @@
     }
 
     .container__profile {
-        padding: 10px;
+        width: 100%;
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .btn {
+        margin: 0.5rem 0 !important;
     }
 }
 
@@ -196,4 +219,56 @@
         margin: 0.5rem 0 !important;
         font-size: 0.8rem;
     }
-}/*# sourceMappingURL=communaute.css.map */
+}
+
+.slogan__communaute2 {
+  margin: 1rem 0;
+}
+
+.card__profile {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card__profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text__communaute {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.picture {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 15px auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .container__profile {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .container__profile {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container__profile {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+/*# sourceMappingURL=communaute.css.map */
