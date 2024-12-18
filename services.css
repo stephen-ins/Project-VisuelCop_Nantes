@@ -91,7 +91,7 @@
   border-radius: 50px;
 }
 .container__team__content .container__service__team {
-  width: 80%;
+  width: 90%;
   display: flex;
   text-align: justify;
   flex-direction: row;
@@ -99,5 +99,5 @@
 }
 .container__team__content .text__services {
   width: 100%;
-  padding: 40px 160px;
+  padding: 40px 10px;
 }/*# sourceMappingURL=services.css.map */
